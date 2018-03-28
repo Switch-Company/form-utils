@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+    <style>
+      form {
+        display: flex;
+        flex-direction: column;
+        max-width: calc( 600rem / 16 );
+        margin: 0 auto;
+      }
+    </style>
+  </head>
+  <body>
+
+    <form action="" method="get">
+      <input type="text" name="text">
+      <input type="checkbox" name="checkbox" checked>
+      <select name="select">
+        <option value="yes">yes</option>
+        <option value="no">no</option>
+      </select>
+
+      <select name="select-multiple[]" multiple>
+        <option value="1">yes</option>
+        <option value="2">no</option>
+        <option value="3">maybe</option>
+      </select>
+
+      <input type="file" name="file" multiple>
+
+      <button type="reset">reset</button>
+      <button type="submit">submit</button>
+    </form>
+
+    <script src="../dist/formUtils.js"></script>
+    <script>
+      var form = document.querySelector( 'form' );
+
+      form.addEventListener( 'submit', e => {
+        e.preventDefault();
+
+        console.log( window.formUtils.toJSON( form ));
+        console.log( window.formUtils.toJSON( form, true ));
+        console.log( window.formUtils.toQuery( form ));
+        console.log( window.formUtils.hasFile( form ));
+      });
+    </script>
+  </body>
+</html>
