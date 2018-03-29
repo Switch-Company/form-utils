@@ -1,6 +1,6 @@
 {
   "name": "@switch-company/form-utils",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Convenience methods for form datas",
   "main": "dist/formUtils.js",
   "module": "lib/index.js",
