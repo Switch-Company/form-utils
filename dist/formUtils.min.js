@@ -1,6 +1,6 @@
 /**
  * @switch-company/form-utils - Convenience methods for form datas
- * @version v1.0.0
+ * @version v1.0.1
  * @link undefined
  * @license ISC
  **/
